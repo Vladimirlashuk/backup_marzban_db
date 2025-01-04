@@ -10,7 +10,6 @@ import time
 import getpass
 import psutil
 
-#time_backup = "20:00" # время срабатывания скрипта
 # Функция для проверки, запущен ли уже скрипт
 def is_already_running():
     script_name = os.path.basename(__file__)
@@ -22,7 +21,7 @@ def is_already_running():
 
 # Проверка на наличие уже запущенного процесса
 if is_already_running():
-    print("Script already exists! exit!.")
+    print("Script already exists! exit!")
     exit()
 
 # Параметры
@@ -84,8 +83,8 @@ def backup_db():
     shutil.copy2(src, dst)
     print(f'Backup created: {dst}')
 
-# Планирование выполнения скрипта каждый день 
-schedule.every().day.at("20:17").do(backup_db)
+# Планирование выполнения скрипта каждый день в  18:00, при необходимости  заменить на нужное время
+schedule.every().day.at("18:00").do(backup_db)
 
 # Бесконечный цикл для выполнения задач по расписанию
 while True:
