@@ -14,10 +14,10 @@ pip install schedule,psutil
 ## Установка
  Скопирируйте скрипт в ппапку /var/lib/marzban и запустите
 
-## Проверка статуса сервиса 
- systemctl status backup_marzban.service
-
 ## Команды
- systemctl stop backup_marzban.service
+ systemctl stop/status/start backup_marzban.service
+
+##Log
+journalctl -u backup_marzban.service
  
- systemctl start backup_marzban.service
+
