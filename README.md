@@ -12,7 +12,12 @@ pip install schedule,psutil
 
 
 ## Установка
- Скопирируйте скрипт в ппапку /var/lib/marzban и запустите
+Перейдите в папку:
+cd /var/lib/marzban
+Скачайте скрипт?:
+wget https://raw.githubusercontent.com/Vladimirlashuk/backup_marzban_db/refs/heads/main/backup_marzban.py
+Запустите скрипт:
+python3 backup_marzban.py
 
 ## Команды
  systemctl stop/status/start backup_marzban.service
